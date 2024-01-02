@@ -1,0 +1,15 @@
+﻿@using BOL;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @{
+        List <Company> com=(List<Company>)this.ViewData["Coy"];
+            foreach(Company c in com){
+                <p>@c.company_name         @c.company_city</p>
+            }
+    }
+</div>
